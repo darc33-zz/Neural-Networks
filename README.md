@@ -37,3 +37,17 @@
 <img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;z_s}{\partial&space;w_{hc}}&space;=&space;hidden_{out}" title="\frac{\partial z_s}{\partial w_{hc}} = hidden_{out}" />
 
 <img src="https://latex.codecogs.com/gif.latex?{\color{Blue}&space;\frac{\partial&space;c}{\partial&space;w_{hc}}&space;=&space;(y_s-t_s)hidden_{out}}" title="{\color{Blue} \frac{\partial c}{\partial w_{hc}} = (y_s-t_s)hidden_{out}}" />
+
+So the gradient is:
+
+<img src="https://latex.codecogs.com/gif.latex?w_{ho}=class_{loss}&space;&plus;&space;wd_{loss}" title="w_{ho}=class_{loss} + wd_{loss}" />
+
+<img src="https://latex.codecogs.com/gif.latex?w_{ho}=Average\left&space;(&space;\frac{\partial&space;c}{\partial&space;w_{hc}}&space;\right&space;)&space;&plus;&space;\frac{\partial&space;wd_{loss}}{\partial&space;w_{hc}}" title="w_{ho}=Average\left ( \frac{\partial c}{\partial w_{hc}} \right ) + \frac{\partial wd_{loss}}{\partial w_{hc}}" />
+
+<img src="https://latex.codecogs.com/gif.latex?wd_{loss}=\frac{1}{2}\left&space;[&space;\sum&space;\sigma&space;^2&space;\right&space;]&space;*&space;wd_{coefficient}" title="wd_{loss}=\frac{1}{2}\left [ \sum \sigma ^2 \right ] * wd_{coefficient}" />
+
+<img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;wd_{loss}}{\partial&space;w_{hc}}=&space;w_{hc}\cdot&space;wd_{coeffient}" title="\frac{\partial wd_{loss}}{\partial w_{hc}}= w_{hc}\cdot wd_{coeffient}" />
+
+In the same way:
+
+<img src="https://latex.codecogs.com/gif.latex?\frac{\partial&space;c}{\partial&space;w_{ih}}=&space;(y_s-t_s)*w_{hc}*hidden_{out}*(1-hidden_{out})*x" title="\frac{\partial c}{\partial w_{ih}}= (y_s-t_s)*w_{hc}*hidden_{out}*(1-hidden_{out})*x" />
