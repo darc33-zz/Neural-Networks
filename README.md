@@ -1,5 +1,5 @@
 # Neural-Networks
 
-##Partition function 
+## Partition function 
 
-$Z=sum(sum(exp(-E(v=1))+1))$
+$ Z=sum(sum(exp(-E(v=1))+1)) $
